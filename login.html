@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zoo-login</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+    </style>
+    <script defer src="./JS/login.js"></script>
+  </head>
+  <body class="loginContainer">
+    <header class="N-hero">
+      <a href="index.html" class="N-logo"><i class="fas fa-paw"></i></a>
+      <div class="N-hamburger"><i class="fas fa-bars"></i></div>
+      <nav class="N-nav">
+        <ul class="N-nav__links">
+          <li class="N-nav__link">
+            <a href="animal-area.html"
+              ><i class="fas fa-hippo"></i><span>動物園區</span></a
+            >
+          </li>
+          <li class="N-nav__link">
+            <a href="shop.html"
+              ><i class="fas fa-shopping-cart"></i><span>商店</span></a
+            >
+          </li>
+          <li class="N-nav__link">
+            <a href="other.html"
+              ><i class="fas fa-info-circle"></i><span>其他</span></a
+            >
+          </li>
+          <li class="N-nav__link">
+            <a href="login.html"
+              ><i class="fas fa-sign-in-alt"></i><span>登入</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="login">
+      <div class="login__signBox">
+        <div class="login__imgBox">
+          <figure class="login__img">
+                <img
+                  src="https://images.unsplash.com/photo-1503918756811-975bd3397178?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="animalPicture"
+                />
+        </div>
+        <div class="login__formBox">
+          <form>
+            <h2>登入</h2>
+            <input type="text" placeholder="你的帳戶名稱" />
+            <input type="password" placeholder="你的密碼" />
+            <input type="submit" value="登入" />
+            <p class="login__signUp">沒有帳戶?<a id="hiddenLogin">現在註冊</a></p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="signup">
+      <div class="signup__signBox">
+        <div class="signup__formBox">
+          <form>
+            <h2>註冊</h2>
+            <input type="text" placeholder="創建新的帳戶名稱" />
+            <input type="email" placeholder="你的信箱" />
+            <input type="password" placeholder="創新新的密碼" />
+            <input type="password" placeholder="再確認新密碼" />
+            <input type="submit" value="註冊" />
+            <p class="signup__login">已經有帳戶了?<a href="#">現在登入</a></p>
+          </form>
+        </div>
+        <div class="signup__imgBox">
+          <figure class="signup__img">
+                <img
+                  src="https://images.unsplash.com/photo-1544648720-132573cb590d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="animalPicture"
+                />
+        </div>
+      </div>
+    </section> -->
+  </body>
+</html>

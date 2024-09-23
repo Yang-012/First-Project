@@ -1,0 +1,82 @@
+@use "base";
+.N-hero {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 3rem;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.N-logo {
+  font-size: 2rem;
+  color: #fff;
+}
+.N-hamburger {
+  display: none;
+}
+.N-nav {
+  display: flex;
+  &__links {
+    position: relative;
+    display: flex;
+  }
+  &__link {
+    list-style: none;
+    a {
+      color: #fff;
+      display: inline;
+      padding: 1rem 1.5rem;
+      font-size: 2rem;
+      text-decoration: none;
+      & :hover {
+        color: $color-tertiary;
+      }
+      i {
+        margin: 0 0.5rem;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem;
+  }
+  .N-hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    i {
+      font-size: 2rem;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  .N-nav {
+    position: absolute;
+    &__links {
+      display: none;
+    }
+    &__open {
+      .N-nav__links {
+        position: fixed;
+        top: 2.5rem;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 2.5rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: brown;
+        z-index: 2;
+      }
+      a {
+        font-size: 3rem;
+      }
+    }
+  }
+}

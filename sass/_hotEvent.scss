@@ -1,0 +1,137 @@
+@use "base";
+
+.hotEvent {
+  margin-top: 30vh;
+  display: flex;
+  flex-direction: row;
+  &__date,
+  &__event {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+  }
+}
+.calendar {
+  width: min(50%, max-content);
+  padding: 30px 20px;
+  border-radius: 10px;
+  border-right: 0.3rem solid black;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+  }
+  &__monthTitle {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+  }
+  &__btns {
+    display: flex;
+    gap: 3rem;
+  }
+  &__btn {
+    width: 4rem;
+    height: 4rem;
+    background: $color-tertiary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7rem;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      background: $color-tertiary;
+      transform: scale(1.05);
+    }
+  }
+  & ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: auto;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  & li {
+    color: black;
+    width: calc(100% / 7);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  &__days {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  &__day {
+    width: calc(100% / 7 - 10px);
+    height: 50px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6rem;
+    font-size: 2rem;
+    font-weight: 400;
+    color: black;
+    transition: all 0.3s;
+    user-select: none;
+    &:hover {
+      transform: scale(1.1);
+      background-color: $color-secondary;
+    }
+    &--next,
+    &--prev {
+      color: #d3d1d1;
+    }
+    &--today {
+      background-color: $color-secondary;
+      transform: scale(1.2);
+      font-size: 3rem;
+    }
+  }
+}
+.event {
+  &__title {
+    flex: 0 0 20%;
+    font-size: 5rem;
+    color: black;
+    border-bottom: 0.3rem solid black;
+  }
+  &__schedule {
+    flex: 1;
+    font-size: 2rem;
+    color: black;
+  }
+}
+
+@media (max-width: 768px) {
+  .hotEvent {
+    flex-direction: column;
+    &__date,
+    &__event {
+      width: 100%;
+    }
+  }
+
+  .calendar {
+    width: 100%; /* 讓 calendar 佔滿容器寬度 */
+    margin-bottom: 20px; /* 在 event 上方添加一些間距 */
+  }
+
+  .event {
+    width: 100%; /* 讓 event 佔滿容器寬度 */
+  }
+}

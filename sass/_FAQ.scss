@@ -1,0 +1,21 @@
+@use "base";
+.FAQ {
+  width: 80%;
+  margin: 1rem auto;
+  &__header {
+    font-size: 2rem;
+  }
+
+  & summary {
+    font-size: 2em;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  & p {
+    padding: 10px;
+    margin-left: 20px;
+    background: linear-gradient(to bottom right, #bcdcbf, #e6f0e5);
+    border-left: 3px solid black;
+  }
+}

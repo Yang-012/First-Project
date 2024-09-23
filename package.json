@@ -1,0 +1,16 @@
+{
+  "name": "sideproject-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "css:build": "sass sass/main.scss:css/style.css",
+    "sass:watch": "sass --watch sass/main.scss:css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "sass": "^1.78.0"
+  }
+}
