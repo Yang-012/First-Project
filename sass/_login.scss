@@ -7,6 +7,10 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  z-index: 10;
+  &__hidden {
+    display: none;
+  }
   &__signBox {
     position: relative;
     width: 80vw;
@@ -88,6 +92,16 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  &__invalid {
+    border: 2px solid red;
+  }
+  &__valid {
+    border: 2px solid greenyellow;
+  }
+  &__open {
+    opacity: 1;
+  }
   &__signBox {
     position: relative;
     width: 80vw;
@@ -116,7 +130,6 @@
     & input {
       background: #f5f5f5;
       width: 60%;
-      border: none;
       outline: none;
       box-shadow: none;
       font-size: 1.3rem;
