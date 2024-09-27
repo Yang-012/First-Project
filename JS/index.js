@@ -20,7 +20,6 @@ const nextBtn = document.querySelector(".next");
 const prevBtn = document.querySelector(".prev");
 const todayBtn = document.querySelector(".today");
 const month = document.querySelector(".calendar__monthTitle");
-
 const months = [
   "January",
   "February",
@@ -57,9 +56,8 @@ const renderCalendar = () => {
   let days = "";
 
   for (let x = firstDay.getDay(); x > 0; x--) {
-    days += `<div class="calendar__day calendar__day--prev">${
-      prevLastDayDate - x + 1
-    }</div>`;
+    days += `<div class="calendar__day calendar__day--prev">${prevLastDayDate - x + 1
+      }</div>`;
   }
 
   for (let i = 1; i <= lastDayDate; i++) {
@@ -116,5 +114,29 @@ function hideTodayBtn() {
     todayBtn.style.display = "flex";
   }
 }
+
 renderCalendar();
 //calendar end
+
+//calendar event display start
+const eventDays = document.querySelectorAll(".calendar__day");
+const hotEvents = document.querySelector(".hotEvent__event");
+eventDays.forEach(eventDay => {
+  eventDay.addEventListener("mouseover", () => {
+    const hotEvent = `
+      <h1 class="event__day">今日活動</h1>
+      <p>海豚跳水</p>
+      <p>時間:1700-1800</p>
+      <p>時間:1700-1800</p>
+      <p>時間:1700-1800</p>
+      <p>時間:1700-1800</p>
+      <p>時間:1700-1800</p>
+    `;
+    hotEvents.innerHTML = hotEvent; 
+  });
+  eventDay.addEventListener("mouseout", () => {
+    hotEvents.innerHTML = '';
+  });
+});
+
+//calendar event display end
