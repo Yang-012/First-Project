@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -14,13 +14,14 @@
     </style>
     <script defer src="./JS/index.js"></script>
   </head>
+
   <body class="indexContainer">
     <header class="hero">
       <img
         src="https://images.unsplash.com/photo-1708005910609-c0a3cfb18b44?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         class="banner"
       />
-      <a href="index.html" class="logo"><i class="fas fa-paw"></i></a>
+      <a href="index.html" class="logo"><i class="fas fa-paw">ZOO.</i></a>
       <div class="hamburger"><i class="fas fa-bars"></i></div>
       <nav class="nav">
         <ul class="nav__links">
@@ -84,12 +85,137 @@
         </div>
       </div>
       <div class="hotEvent__event">
-        <div class="event__title">今日活動!</div>
-        <div class="event__schedule">2100海豚秀!</div>
+        <h1 class="event__day">今日活動</h1>
+        <div class="event__seperator"></div>
+        <h2 class="event__title">獅子跳火圈</h2>
+        <p class="event__time">
+          <i class="fas fa-clock"></i>第一場次:0900-1100
+        </p>
+        <p class="event__time">
+          <i class="fas fa-clock"></i>第二場次:1300-1500
+        </p>
+        <p class="event__location">
+          <i class="fas fa-location-arrow"></i>地點:非洲動物園區
+        </p>
+        <p class="event__others">*盡請把握時間觀賞</p>
       </div>
     </section>
-    <section class="animalStar">動物明星</section>
-    <section class="ticket">門票</section>
+    <section class="animalStar">
+      <div class="animalStar__list">
+        <div class="animalStar__item" style="--position: 1">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1669725687221-6fe12c2da6b1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+        </div>
+        <div class="animalStar__item" style="--position: 2">
+          <img
+            src="https://images.unsplash.com/photo-1525382455947-f319bc05fb35?q=80&w=1796&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+        </div>
+        <div class="animalStar__item" style="--position: 3">
+          <img
+            src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+        </div>
+        <div class="animalStar__item" style="--position: 4">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1661810056990-57be781caa2d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+        </div>
+        <div class="animalStar__item" style="--position: 5">
+          <img
+            src="https://images.unsplash.com/photo-1486365227551-f3f90034a57c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+        </div>
+        <div class="animalStar__item" style="--position: 6">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1661904930364-fe26ae15bba2?q=80&w=1981&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <section class="tickets">
+      <div class="ticket">
+        <div class="ticket__img">
+          <img
+            src="https://images.unsplash.com/photo-1529337097261-5f80758227c2?q=80&w=1941&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="animalPicture"
+          />
+        </div>
+        <div class="ticket__context">
+          <div class="ticket__overlay"></div>
+          <div class="ticket__details">
+            <p class="details__title">日票</p>
+            <div class="details__seperator"></div>
+            <p class="details__price">150$</p>
+            <div class="details__info">
+              <p class="details__info-description">享受一整天的動物園漫遊!!</p>
+              <p class="details__info-disclaimer">
+                &#42;本票僅限個人使用，嚴禁轉售或以高於票面價格進行販售，違者將取消票務資格，並可能遭到法律追究。<br />
+                &#42;如因不可抗力（包括但不限於自然災害、戰爭、罷工等）導致活動無法舉行，主辦單位有權取消或改期活動，並不承擔任何責任。
+              </p>
+            </div>
+          </div>
+          <button class="ticket__buy">馬上購票!</button>
+        </div>
+      </div>
+      <div class="ticket">
+        <div class="ticket__img">
+          <img
+            src="https://images.unsplash.com/photo-1689758387569-6ca81ddb9b52?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="animalPicture"
+          />
+        </div>
+        <div class="ticket__context">
+          <div class="ticket__overlay"></div>
+          <div class="ticket__details">
+            <p class="details__title">月票</p>
+            <div class="details__seperator"></div>
+            <p class="details__price">500$</p>
+            <div class="details__info">
+              <p class="details__info-description">
+                享受一整個月的動物園漫遊!!
+              </p>
+              <p class="details__info-disclaimer">
+                &#42;本票僅限個人使用，嚴禁轉售或以高於票面價格進行販售，違者將取消票務資格，並可能遭到法律追究。<br />
+                &#42;如因不可抗力（包括但不限於自然災害、戰爭、罷工等）導致活動無法舉行，主辦單位有權取消或改期活動，並不承擔任何責任。
+              </p>
+            </div>
+          </div>
+          <button class="ticket__buy">馬上購票!</button>
+        </div>
+      </div>
+      <div class="ticket">
+        <div class="ticket__img">
+          <img
+            src="https://images.unsplash.com/photo-1599777850235-3e8f4f0ac3ae?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="animalPicture"
+          />
+        </div>
+        <div class="ticket__context">
+          <div class="ticket__overlay"></div>
+          <div class="ticket__details">
+            <p class="details__title">年票</p>
+            <div class="details__seperator"></div>
+            <p class="details__price">1000$</p>
+            <div class="details__info">
+              <p class="details__info-description">享受一整年的動物園漫遊!!</p>
+              <p class="details__info-disclaimer">
+                &#42;本票僅限個人使用，嚴禁轉售或以高於票面價格進行販售，違者將取消票務資格，並可能遭到法律追究。<br />
+                &#42;如因不可抗力（包括但不限於自然災害、戰爭、罷工等）導致活動無法舉行，主辦單位有權取消或改期活動，並不承擔任何責任。
+              </p>
+            </div>
+          </div>
+          <button class="ticket__buy">馬上購票!</button>
+        </div>
+      </div>
+    </section>
     <section class="FAQ">
       <h2 class="FAQ__header">常見問題</h2>
       <details class="FAQ__question">

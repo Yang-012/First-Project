@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "老虎絨毛玩偶",
+    "price": 35,
+    "image": "https://images.unsplash.com/photo-1701772442641-ff39b8755bba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "這款可愛的老虎絨毛玩偶採用柔軟的高品質材質製成，非常適合擁抱。其逼真的設計靈感來自威風凜凜的孟加拉虎，讓大自然的野性氣息融入您的家中。這款玩偶是送給動物愛好者和孩子的絕佳禮物，使用環保材質和安全無毒的染料製作。"
+  },
+  {
+    "id": 2,
+    "name": "企鵝造型抱枕",
+    "price": 45,
+    "image": "https://plus.unsplash.com/premium_photo-1661855291083-d0a52c38db0c?q=80&w=2064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "這款企鵝造型抱枕採用超柔軟的棉質材料製成，給您極致的舒適感受。憨態可掬的企鵝設計，讓您的房間增添一絲趣味與溫馨。不僅是理想的家居裝飾，也是孩子們最喜歡的伴睡玩偶。所有材料均為環保且無毒，讓您安心使用。"
+  }
+]

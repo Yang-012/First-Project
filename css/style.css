@@ -17,6 +17,7 @@ body {
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 400;
   line-height: 1.8;
+  overflow-x: hidden;
 }
 
 .indexContainer {
@@ -47,6 +48,7 @@ body {
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 400;
   line-height: 1.8;
+  overflow-x: hidden;
 }
 
 .indexContainer {
@@ -147,9 +149,42 @@ body {
 }
 
 .animalStar {
-  background-color: palegreen;
+  width: 100%;
+  height: 10rem;
+  margin: 5rem 0;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+}
+.animalStar:hover .animalStar__item {
+  animation-play-state: paused;
+}
+.animalStar__list {
+  display: flex;
+  gap: 5rem;
+  position: relative;
+}
+.animalStar__item {
+  position: absolute;
+  width: 10rem;
+  left: 100%;
+  animation: autoRun 10s linear infinite;
+  animation-delay: calc(1.6666666667s * (var(--position) - 1) - 10s);
+}
+.animalStar__item img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -10rem;
+  }
+}
 *,
 *::before,
 *::after {
@@ -167,6 +202,7 @@ body {
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 400;
   line-height: 1.8;
+  overflow-x: hidden;
 }
 
 .indexContainer {
@@ -185,20 +221,28 @@ body {
   display: flex;
   flex-direction: row;
 }
-.hotEvent__date, .hotEvent__event {
+.hotEvent__date {
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: peachpuff;
+  border: 0.3rem solid black;
+  border-radius: 10px;
+}
+.hotEvent__event {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, transparent, rgb(240, 250, 49) 15%, rgb(240, 250, 49) 85%, transparent);
 }
 
 .calendar {
-  width: min(50%, max-content);
+  width: 100%;
   padding: 30px 20px;
-  border-radius: 10px;
-  border-right: 0.3rem solid black;
 }
 .calendar__header {
   display: flex;
@@ -263,7 +307,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 0.6rem;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 400;
   color: black;
   transition: all 0.3s;
@@ -271,27 +315,41 @@ body {
 }
 .calendar__day:hover {
   transform: scale(1.1);
-  background-color: #d4a36c;
+  background-color: greenyellow;
 }
 .calendar__day--next, .calendar__day--prev {
   color: #d3d1d1;
 }
 .calendar__day--today {
-  background-color: #d4a36c;
-  transform: scale(1.2);
+  background-color: greenyellow;
+  transform: scale(1);
   font-size: 3rem;
 }
 
-.event__title {
-  flex: 0 0 20%;
-  font-size: 5rem;
+.event {
   color: black;
-  border-bottom: 0.3rem solid black;
+  text-align: start;
 }
-.event__schedule {
-  flex: 1;
+.event__day {
+  font-size: 10rem;
+}
+.event__seperator {
+  width: 50%;
+  height: 0.5rem;
+  background-color: black;
+  margin-bottom: 1rem;
+}
+.event__title {
+  font-size: 5rem;
+}
+.event__time {
   font-size: 2rem;
-  color: black;
+}
+.event__location {
+  font-size: 2rem;
+}
+.event__others {
+  font-size: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -302,11 +360,11 @@ body {
     width: 100%;
   }
   .calendar {
-    width: 100%; /* 讓 calendar 佔滿容器寬度 */
-    margin-bottom: 20px; /* 在 event 上方添加一些間距 */
+    width: 100%;
+    margin-bottom: 20px;
   }
   .event {
-    width: 100%; /* 讓 event 佔滿容器寬度 */
+    width: 100%;
   }
 }
 *,
@@ -326,6 +384,7 @@ body {
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 400;
   line-height: 1.8;
+  overflow-x: hidden;
 }
 
 .indexContainer {
@@ -340,23 +399,25 @@ body {
 }
 
 .FAQ {
-  width: 80%;
-  margin: 1rem auto;
+  width: 90%;
+  margin: 3rem auto;
 }
 .FAQ__header {
-  font-size: 2rem;
+  font-size: 5rem;
+  text-align: center;
 }
 .FAQ summary {
-  font-size: 2em;
+  font-size: 3em;
   cursor: pointer;
   font-weight: bold;
   margin-bottom: 5px;
 }
 .FAQ p {
+  font-size: 3rem;
   padding: 10px;
   margin-left: 20px;
   background: linear-gradient(to bottom right, #bcdcbf, #e6f0e5);
-  border-left: 3px solid black;
+  border-left: 1rem solid black;
 }
 
 .footer {
@@ -364,6 +425,7 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   color: black;
+  margin: 0 3rem;
 }
 .footer_followUs {
   grid-column: 1;
@@ -424,6 +486,7 @@ body {
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 400;
   line-height: 1.8;
+  overflow-x: hidden;
 }
 
 .indexContainer {
@@ -484,7 +547,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3rem;
+  font-size: 10rem;
   color: #fff;
   transition: 1s;
   z-index: 1;
@@ -562,8 +625,99 @@ body {
     font-size: 3rem;
   }
 }
+.tickets {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
 .ticket {
-  background-color: red;
+  position: relative;
+  width: 32rem;
+  height: 57rem;
+  overflow: hidden;
+  background-color: antiquewhite;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.ticket:hover .ticket__overlay {
+  opacity: 1;
+  height: 17rem;
+}
+.ticket:hover .ticket__buy {
+  top: 2rem;
+}
+.ticket__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.ticket__img img {
+  width: 100%;
+}
+.ticket__context {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.ticket__overlay {
+  position: relative;
+  width: 100%;
+  height: 42rem;
+  background-color: rgba(21, 106, 162, 0.6);
+  opacity: 0;
+  transition: height linear 0.4s, opacity linear 0.2s;
+}
+.ticket__details {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.ticket__buy {
+  color: azure;
+  border: 0.2rem solid black;
+  background-color: transparent;
+  position: absolute;
+  top: -10rem;
+  left: 50%;
+  width: 50%;
+  padding: 1rem 0;
+  font-size: 3rem;
+  font-weight: 700;
+  transform: translateX(-50%);
+  transition: background-color 0.4s, top 0.5s;
+}
+.ticket__buy:hover {
+  background-color: black;
+}
+
+.details__title, .details__price {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 1rem;
+}
+.details__seperator {
+  width: 30%;
+  height: 0.2rem;
+  background-color: white;
+  margin-bottom: 0.5rem;
+}
+.details__info {
+  border-top: 0.3rem dashed #bbb;
+  padding: 2rem;
+}
+.details__info-description {
+  font-size: 2rem;
+  margin-bottom: 5.5rem;
+  text-align: center;
 }
 
 *,
@@ -583,6 +737,7 @@ body {
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 400;
   line-height: 1.8;
+  overflow-x: hidden;
 }
 
 .indexContainer {
@@ -696,6 +851,7 @@ body {
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 400;
   line-height: 1.8;
+  overflow-x: hidden;
 }
 
 .indexContainer {
