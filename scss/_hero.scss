@@ -1,0 +1,127 @@
+@use "base";
+.hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 0 10rem;
+  background-color: wheat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: 1s;
+  z-index: 2;
+  &__sticky {
+    height: 8rem;
+    & .logo {
+      position: absolute;
+      font-size: 4em;
+      left: 1rem;
+      transform: translate(0, -50%);
+    }
+    & .banner {
+      opacity: 0.5;
+    }
+    & .nav__links {
+      transform: translateX(0);
+      opacity: 1;
+      transition-delay: 0.75s;
+    }
+  }
+}
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s;
+}
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10rem;
+  color: #fff;
+  transition: 1s;
+  z-index: 1;
+}
+.hamburger {
+  display: none;
+}
+.nav {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  &__links {
+    position: relative;
+    display: flex;
+    transition: 0.3s;
+    transform: translateX(10rem);
+    opacity: 0;
+  }
+  &__link {
+    list-style: none;
+    a {
+      color: #fff;
+      display: inline;
+      padding: 1rem 1.5rem;
+      font-size: 2rem;
+      text-decoration: none;
+      & :hover {
+        color: $color-tertiary;
+      }
+      i {
+        margin: 0 0.5rem;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem;
+    &__sticky {
+      .hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 1.5rem;
+        right: 4rem;
+        width: 5rem;
+        height: 5rem;
+        cursor: pointer;
+        i {
+          font-size: 4rem;
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+  .nav {
+    &__links {
+      display: none;
+    }
+    &__open {
+      .nav__links {
+        position: fixed;
+        top: 8rem;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 8rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-primary;
+      }
+      a {
+        font-size: 3rem;
+      }
+    }
+  }
+}

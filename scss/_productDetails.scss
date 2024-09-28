@@ -1,0 +1,29 @@
+@use "base";
+.productDetails {
+  &__title {
+    font-size: 10rem;
+    text-align: center;
+  }
+  &__details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    text-align: left;
+  }
+  &__name {
+    font-size: 5rem;
+  }
+  &__price {
+    font-size: 5rem;
+  }
+  &__description {
+    font-size: 5rem;
+  }
+  &__image {
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10rem;
+    }
+  }
+}

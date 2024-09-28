@@ -1,0 +1,36 @@
+@use "base";
+.shopList {
+  width: 90vw;
+  margin: 0 auto;
+  &__title {
+    font-size: 5rem;
+    text-align: center;
+  }
+  &__products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+    a {
+      text-decoration: none;
+    }
+  }
+  &__name {
+    font-size: 4rem;
+    display: inline-block;
+  }
+  &__price {
+    display: inline-block;
+    font-size: 3rem;
+  }
+  &__product {
+    background-color: palegoldenrod;
+    border-radius: 2rem;
+    text-align: center;
+    padding: 1rem;
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}
