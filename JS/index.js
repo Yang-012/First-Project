@@ -1,9 +1,20 @@
 //banner star
-window.addEventListener("scroll", function () {
-  const header = document.querySelector("header");
-  header.classList.toggle("hero__sticky", window.scrollY > 0);
+const header = document.querySelector("header");
+const hotEvent = document.querySelector(".hotEvent");
+const heroSticky = (entries) => {
+  const [entry] = entries;
+  console.log(entry);
+  if (!entry.isIntersecting) header.classList.add("hero__sticky");
+  else header.classList.remove("hero__sticky");
+};
+const headerObserver = new IntersectionObserver(heroSticky, {
+  root: null,
+  threshold: 0,
+  rootMargin: "-660px",
 });
+headerObserver.observe(hotEvent);
 //banner end
+
 //hamburger start
 const navigation = document.querySelector("nav");
 document.querySelector(".hamburger").onclick = function () {
