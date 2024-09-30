@@ -66,13 +66,13 @@
     <section class="signup">
       <div class="signup__signBox">
         <div class="signup__formBox">
-          <form>
+          <form id="signupForm">
             <h2>註冊</h2>
-            <input id="signUsername"type="username" placeholder="創建新的帳戶名稱" required/>
+            <input id="signUsername"type="text" placeholder="創建使用者名稱" required/>
             <input id="signEmail"type="email" placeholder="你的信箱" required/>
-            <input id="signPassword"type="password" placeholder="創新新的密碼" autocomplete="new-password"required />
+            <input id="signPassword"type="password" placeholder="創建新的密碼" autocomplete="new-password"required />
             <input id="signPasswordRepeat"type="password" placeholder="再確認新密碼"autocomplete="new-password" required/>
-            <input id="signSubmit"type="submit" value="註冊" />
+            <input id="signSubmit"type="submit" value="註冊" disabled/>
             <p class="signup__login">已經有帳戶了?<a id="hiddenSignup">現在登入</a></p>
             <div class="message" id="signMessage"></div>
           </form>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Shop</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+    </style>
+    <script defer src="./JS/shopCart.js"></script>
+  </head>
+</head> 
+<body class="shopCartContaioner">
+  <header class="N-hero">
+    <a href="index.html" class="N-logo"><i class="fas fa-paw"></i></a>
+    <div class="N-hamburger"><i class="fas fa-bars"></i></div>
+    <nav class="N-nav">
+      <ul class="N-nav__links">
+        <li class="N-nav__link">
+          <a href="animal-area.html"
+            ><i class="fas fa-hippo"></i><span>動物園區</span></a
+          >
+        </li>
+        <li class="N-nav__link">
+          <a href="shop.html"
+              ><i class="fas fa-store"></i><span>商店</span></a
+            >
+        </li>
+        <li class="N-nav__link">
+          <a href="shopCart.html"
+              ><i class="fas fa-shopping-cart"></i><span>購物車</span></a
+            >
+        </li>
+        <li class="N-nav__link">
+          <a href="login.html"
+            ><i class="fas fa-sign-in-alt"></i><span>登入</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+  </header>  
+  <div class="shopCart">
+    <div class="shopCart__list">
+      商品清單
+    </div>
+    <div class="shopCart__pay">
+      <div class="shopCart__pay--left">
+        <h5>原價: </h5>
+        <h5>折扣:</h5>
+        <hr>
+        <h5>總價:</h5>
+     </div>
+     <div class="shopCart__pay--right">
+        <h5>$<span id="subTotal">1,278</span></h5>
+        <h5>$<span id="taxAmount">0</span></h5>
+        <hr>
+        <h5>$<span id="totalPrice">1,278</span></h5>
+     </div>
+     <div class="shopCart__button" >
+      <button type="button" >結帳</button>
+     </div>
+    </div>
+  </div>
+</body>
+</html>

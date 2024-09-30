@@ -40,3 +40,13 @@ body {
   grid-template-rows: 4vw 1fr;
   gap: 2rem;
 }
+.mapContainer{
+  display: grid;
+  grid-template-rows: 4vw 1fr 1fr;
+  gap: 2rem;
+}
+.shopCartContaioner{
+  display: grid;
+  grid-template-rows: 4vw 1fr;
+  gap: 2rem;
+}

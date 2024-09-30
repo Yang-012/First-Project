@@ -1,4 +1,7 @@
 @use "base";
+.message{
+  font-size: 3rem;
+}
 .login {
   position: absolute;
   top: 7rem;
@@ -8,9 +11,11 @@
   justify-content: center;
   align-items: center;
   z-index: 10;
+
   &__hidden {
     display: none;
   }
+
   &__signBox {
     position: relative;
     width: 80vw;
@@ -19,33 +24,38 @@
     gap: 1rem;
     border: 0.2rem solid black;
   }
+
   &__imgBox {
     position: relative;
     width: 50%;
     overflow: hidden;
     z-index: 1;
   }
+
   &__formBox {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     padding-left: 4rem;
+
     & h2 {
       font-size: 5rem;
       text-align: center;
       margin-right: 3rem;
     }
+
     & input {
       background: #f5f5f5;
       width: 60%;
       border: none;
       outline: none;
       box-shadow: none;
-      font-size: 1.3rem;
+      font-size: 4rem;
       margin: 1rem 0;
       letter-spacing: 0.1rem;
       transition: 0.5s;
+
       &[type="submit"] {
         background-color: #677eff;
         border-radius: 0.5rem;
@@ -57,21 +67,25 @@
       }
     }
   }
+
   &__signUp {
     position: relative;
     margin-top: 2rem;
-    font-size: 1.2rem;
+    font-size: 3rem;
     color: #555;
+    cursor: pointer;
     & a {
       color: #577eff;
       text-decoration: none;
     }
   }
+
   &__login {
     position: relative;
     margin-top: 2rem;
     font-size: 1.2rem;
     color: #555;
+
     & a {
       color: #577eff;
       text-decoration: none;
@@ -84,6 +98,7 @@
     max-height: 100%;
   }
 }
+
 .signup {
   position: absolute;
   top: 7rem;
@@ -93,15 +108,19 @@
   justify-content: center;
   align-items: center;
   opacity: 0;
+
   &__invalid {
     border: 2px solid red;
   }
+
   &__valid {
-    border: 2px solid greenyellow;
+    border: 2px solid green;
   }
+
   &__open {
     opacity: 1;
   }
+
   &__signBox {
     position: relative;
     width: 80vw;
@@ -110,32 +129,37 @@
     gap: 1rem;
     border: 0.2rem solid black;
   }
+
   &__imgBox {
     position: relative;
     width: 50%;
     overflow: hidden;
     z-index: 1;
   }
+
   &__formBox {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     padding-left: 4rem;
+
     & h2 {
       font-size: 5rem;
       text-align: center;
       margin-right: 3rem;
     }
+
     & input {
       background: #f5f5f5;
       width: 60%;
       outline: none;
       box-shadow: none;
-      font-size: 1.3rem;
+      font-size: 4rem;
       margin: 1rem 0;
       letter-spacing: 0.1rem;
       transition: 0.5s;
+
       &[type="submit"] {
         background-color: #677eff;
         border-radius: 0.5rem;
@@ -144,24 +168,32 @@
         cursor: pointer;
         transition: 0.5s;
         display: block;
+        &:disabled {
+          background-color: #ccc;
+          cursor: not-allowed;
+      }
       }
     }
   }
+
   &__signUp {
     position: relative;
     margin-top: 2rem;
     font-size: 1.2rem;
     color: #555;
+
     & a {
       color: #577eff;
       text-decoration: none;
     }
   }
+
   &__login {
     position: relative;
     margin-top: 2rem;
-    font-size: 1.2rem;
+    font-size: 3rem;
     color: #555;
+    cursor: pointer;
     & a {
       color: #577eff;
       text-decoration: none;

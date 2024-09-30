@@ -1,63 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <title>ShopProduct</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
-    </style>
-    <script defer src="./JS/product.js"></script>
-  </head>
-  <body class="shopProductContainer">
-    <header class="N-hero">
-      <a href="index.html" class="N-logo"><i class="fas fa-paw"></i></a>
-      <div class="N-hamburger"><i class="fas fa-bars"></i></div>
-      <nav class="N-nav">
-        <ul class="N-nav__links">
-          <li class="N-nav__link">
-            <a href="animal-area.html"
-              ><i class="fas fa-hippo"></i><span>動物園區</span></a
-            >
-          </li>
-          <li class="N-nav__link">
-            <a href="shop.html"
-              ><i class="fas fa-shopping-cart"></i><span>商店</span></a
-            >
-          </li>
-          <li class="N-nav__link">
-            <a href="other.html"
-              ><i class="fas fa-info-circle"></i><span>其他</span></a
-            >
-          </li>
-          <li class="N-nav__link">
-            <a href="login.html"
-              ><i class="fas fa-sign-in-alt"></i><span>登入</span></a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <div class="productDetails">
-      <div class="productDetails__title">商品內容</div>
-      <div class="productDetails__details">
-        <div class="productDetails__image">
-          <img src="" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <title>ShopProduct</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+  </style>
+  <script defer src="./JS/product.js"></script>
+</head>
+
+<body class="shopProductContainer">
+  <header class="N-hero">
+    <a href="index.html" class="N-logo"><i class="fas fa-paw"></i></a>
+    <div class="N-hamburger"><i class="fas fa-bars"></i></div>
+    <nav class="N-nav">
+      <ul class="N-nav__links">
+        <li class="N-nav__link">
+          <a href="map.html"><i class="fas fa-map-marker-alt"></i><span>前往方式</span></a>
+        </li>
+        <li class="N-nav__link">
+          <a href="shop.html"><i class="fas fa-store"></i><span>商店</span></a>
+        </li>
+        <li class="N-nav__link">
+          <a href="shopCart.html"><i class="fas fa-shopping-cart"></i><span>購物車</span></a>
+          <span class="N-nav__openCart">5</span>
+        </li>
+        <li class="N-nav__link">
+          <a href="login.html"><i class="fas fa-sign-in-alt"></i><span>登入</span></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="productDetails">
+    <div class="productDetails__title">商品內容</div>
+    <div class="productDetails__details">
+      <div class="productDetails__image">
+        <img src="" />
+      </div>
+      <div class="productDetails__content">
+        <h1 class="productDetails__name"></h1>
+        <div class="productDetails__price"></div>
+        <div class="productDetails__buttons">
+          <button id="productCart" class="productDetails__cart"><i class="fas fa-shopping-cart"></i></button>
+          <button id="productPay" class="productDetails__pay"><i class="fas fa-wallet"></i></button>
         </div>
-        <div class="productDetails__content">
-          <h1 class="productDetails__name"></h1>
-          <div class="productDetails__price"></div>
-          <div class="productDetails__buttons"></div>
-          <div class="productDetails__description"></div>
-        </div>
+        <div class="productDetails__description"></div>
       </div>
     </div>
-    <div class="shopList__title"><i class="fas fa-gift"></i> 其他商品</div>
-    <div class="shopList__products"></div>
-  </body>
+  </div>
+  <div class="shopList__title"><i class="fas fa-gift"></i> 其他商品</div>
+  <div class="shopList__products"></div>
+</body>
+
 </html>

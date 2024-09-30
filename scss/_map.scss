@@ -1,0 +1,21 @@
+.search {
+    width: 80%;
+    margin: 0 auto;
+    &__title {
+        font-size: 5rem;
+        text-align: center;
+    }
+    &__description{
+        font-size: 3rem;
+        text-align: left;
+    }
+    &__label{
+        font-size: 3rem;
+    }
+    &__input{
+        font-size: 3rem;
+        background-color: antiquewhite;
+        border: 0;
+        border-radius: 2rem;
+    }
+}

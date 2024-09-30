@@ -27,46 +27,105 @@ document.getElementById("signSubmit").onclick = function (event) {
   signupBox.classList.remove("signup__open");
 };
 //login-signup-change start end
+
+
 //sign validation start
 const signUsernameInput = document.getElementById("signUsername");
 const signPasswordInput = document.getElementById("signPassword");
+const signPasswordInputRepeat = document.getElementById("signPasswordRepeat");
 const signEmailInput = document.getElementById("signEmail");
 const signSubmit = document.getElementById("signSubmit");
 const signMessage = document.getElementById("signMessage");
+const currentErrors = {};
 
-function validateSignUsername() {
-  const signUsername = signUsernameInput.value.trim();
-  if (signUsername === "") {
-    signUsernameInput.classList.remove("signup__valid");
-    signUsernameInput.classList.add("signup__invalid");
+function validateField(field) {
+  let isValid = true;
+  let errorMsg = "";
+
+  switch (field.id) {
+    case "signUsername":
+      const signUsername = field.value.trim();
+      if (signUsername === "") {
+        isValid = false;
+        errorMsg = "請輸入使用者名稱!";
+      }
+      break;
+    case "signPassword":
+      const signPassword = field.value.trim();
+      if (signPassword === "") {
+        isValid = false;
+        errorMsg = "請輸入密碼!";
+      }
+      break;
+    case "signPasswordRepeat":
+      const password = signPasswordInput.value.trim();
+      const passwordRepeat = field.value.trim();
+      if (passwordRepeat === "") {
+        isValid = false;
+        errorMsg = "請確認密碼!";
+      } else if (password !== passwordRepeat) {
+        isValid = false;
+        errorMsg = "密碼不匹配!";
+      }
+      break;
+    case "signEmail":
+      const signEmail = field.value.trim();
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (signEmail === "") {
+        isValid = false;
+        errorMsg = "請輸入電子郵件!";
+      } else if (!emailPattern.test(signEmail)) {
+        isValid = false;
+        errorMsg = "請輸入有效的電子郵件!";
+      }
+      break;
+    default:
+      break;
+  }
+
+  if (!isValid) {
+    field.classList.remove("signup__valid");
+    field.classList.add("signup__invalid");
+    currentErrors[field.id] = errorMsg;
   } else {
-    signUsernameInput.classList.remove("signup__invalid");
-    signUsernameInput.classList.add("signup__valid");
+    field.classList.remove("signup__invalid");
+    field.classList.add("signup__valid");
+    delete currentErrors[field.id];
+  }
+
+  updateErrorMessage();
+  toggleSubmitButton()
+}
+function updateErrorMessage() {
+  const errors = Object.values(currentErrors);
+  if (errors.length > 0) {
+    signMessage.innerHTML = `<p>${errors.join("<br>")}</p>`;
+    signMessage.style.display = "block";
+    signMessage.style.color = "red";
+  } else {
+    signMessage.style.display = "none";
   }
 }
-function validateSignPassword() {
-  const signPassword = signPasswordInput.value.trim();
-  if (signPassword === "") {
-    signPasswordInput.classList.remove("signup__valid");
-    signPasswordInput.classList.add("signup__invalid");
+function toggleSubmitButton() {
+  if (
+      Object.keys(currentErrors).length === 0 &&
+      signUsernameInput.value.trim() !== "" &&
+      signPasswordInput.value.trim() !== "" &&
+      signPasswordInputRepeat.value.trim() !== "" &&
+      signEmailInput.value.trim() !== ""
+  ) {
+      signSubmit.disabled = false;
   } else {
-    signPasswordInput.classList.remove("signup__invalid");
-    signPasswordInput.classList.add("signup__valid");
+      signSubmit.disabled = true;
   }
 }
-function validateSignEmail() {
-  const signEmail = signEmailInput.value.trim();
-  if (signEmail === "") {
-    signEmailInput.classList.remove("signup__valid");
-    signEmailInput.classList.add("signup__invalid");
-  } else {
-    signEmailInput.classList.remove("signup__invalid");
-    signEmailInput.classList.add("signup__valid");
-  }
-}
-signUsernameInput.addEventListener("blur", validateSignUsername);
-signPasswordInput.addEventListener("blur", validateSignPassword);
-signEmailInput.addEventListener("blur", validateSignEmail);
+
+signUsernameInput.addEventListener("blur", () => validateField(signUsernameInput));
+signPasswordInput.addEventListener("blur", () => validateField(signPasswordInput));
+signPasswordInputRepeat.addEventListener("blur", () => validateField(signPasswordInputRepeat));
+signEmailInput.addEventListener("blur", () => validateField(signEmailInput));
+
 //sign validation end
+
 //login validation start
 //login validation end

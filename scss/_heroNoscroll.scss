@@ -38,7 +38,22 @@
       }
     }
   }
+  &__openCart{
+    position: absolute;
+    font-size: 2rem;
+    width: 5%;
+    height: 86%;
+    right:90px;
+    top:-7px;
+    color: black;
+    background-color: #fff;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+  }
 }
+
 @media (max-width: 768px) {
   .hero {
     padding: 4rem;

@@ -38,3 +38,6 @@ function showDetail() {
     });
 }
 //productDetail display end
+//productCart display start
+const productCart = document.getElementById("productCart");
+//productCart display end
