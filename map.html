@@ -1,50 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=H, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=H, initial-scale=1.0" />
     <title>MAP</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <title>ZOO</title>
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
     </style>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOxkDMaKO8cV6zTubcvkqkalbbBEkGY6g&libraries=places&callback=initMap"
+      async
+      defer
+    ></script>
     <script defer src="./JS/map.js"></script>
-</head>
+  </head>
 
-<body class="mapContainer">
+  <body class="mapContainer">
     <header class="N-hero">
-        <a href="index.html" class="N-logo"><i class="fas fa-paw"></i></a>
-        <div class="N-hamburger"><i class="fas fa-bars"></i></div>
-        <nav class="N-nav">
-            <ul class="N-nav__links">
-                <li class="N-nav__link">
-                    <a href="animal-area.html"><i class="fas fa-hippo"></i><span>動物園區</span></a>
-                </li>
-                <li class="N-nav__link">
-                    <a href="shop.html"><i class="fas fa-shopping-cart"></i><span>商店</span></a>
-                </li>
-                <li class="N-nav__link">
-                    <a href="other.html"><i class="fas fa-info-circle"></i><span>其他</span></a>
-                </li>
-                <li class="N-nav__link">
-                    <a href="login.html"><i class="fas fa-sign-in-alt"></i><span>登入</span></a>
-                </li>
-            </ul>
-        </nav>
+      <a href="index.html" class="N-logo"><i class="fas fa-paw"></i></a>
+      <div class="N-hamburger"><i class="fas fa-bars"></i></div>
+      <nav class="N-nav">
+        <ul class="N-nav__links">
+          <li class="N-nav__link">
+            <a href="animal-area.html"
+              ><i class="fas fa-hippo"></i><span>動物園區</span></a
+            >
+          </li>
+          <li class="N-nav__link">
+            <a href="shop.html"
+              ><i class="fas fa-shopping-cart"></i><span>商店</span></a
+            >
+          </li>
+          <li class="N-nav__link">
+            <a href="other.html"
+              ><i class="fas fa-info-circle"></i><span>其他</span></a
+            >
+          </li>
+          <li class="N-nav__link">
+            <a href="login.html"
+              ><i class="fas fa-sign-in-alt"></i><span>登入</span></a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
     <div class="search">
-        <h1 class="search__title">如何前往動物園</h1>
-        <p class="search__description">請輸入你的交通方式</p>
-        <label class="search__label">你的出發地:
-            <input class="search__input" type="text" name="text">
+      <h1 class="search__title">如何前往動物園</h1>
+      <div class="search__left">
+        <label class="search__label"
+          >你的出發地:
+          <input
+            id="search__input"
+            class="search__input"
+            type="text"
+            name="text"
+          />
+          <button class="search__button" onclick="calcRoute()">計算路線</button>
         </label>
+      </div>
+      <div class="search__output"></div>
     </div>
-    <div class="map">
-        <h1>這裡是地圖</h1>
-    </div>
-</body>
-
+    <div id="googleMap" class="googleMap"></div>
+  </body>
 </html>
