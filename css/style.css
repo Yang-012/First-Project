@@ -199,7 +199,7 @@ body {
 .animalStar {
   width: 100%;
   height: 10rem;
-  margin: 5rem 0;
+  margin: 3rem 0;
   overflow: hidden;
   mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
 }
@@ -208,7 +208,7 @@ body {
 }
 .animalStar__list {
   display: flex;
-  gap: 5rem;
+  gap: 4rem;
   position: relative;
 }
 .animalStar__item {
@@ -693,15 +693,15 @@ body {
 .nav__link {
   list-style: none;
 }
+.nav__link:hover {
+  scale: 1.2;
+}
 .nav__link a {
   color: #fff;
   display: inline;
   padding: 1rem 1.5rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-decoration: none;
-}
-.nav__link a :hover {
-  color: #000000;
 }
 .nav__link a i {
   margin: 0 0.5rem;
@@ -897,9 +897,8 @@ body {
 }
 
 .N-hero {
-  top: 0;
-  left: 0;
   width: 100%;
+  height: 100%;
   padding: 1.5rem 3rem;
   background-color: black;
   display: flex;
@@ -908,8 +907,11 @@ body {
 }
 
 .N-logo {
-  font-size: 3rem;
+  font-size: 4rem;
   color: #fff;
+}
+.N-logo:hover {
+  scale: 1.2;
 }
 
 .N-hamburger {
@@ -918,6 +920,9 @@ body {
 
 .N-nav {
   display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 .N-nav__links {
   position: relative;
@@ -927,14 +932,11 @@ body {
   list-style: none;
 }
 .N-nav__link a {
-  color: #fff;
+  color: white;
   display: inline;
   padding: 1rem 1.5rem;
   font-size: 2rem;
   text-decoration: none;
-}
-.N-nav__link a :hover {
-  color: #000000;
 }
 .N-nav__link a i {
   margin: 0 0.5rem;
@@ -942,10 +944,10 @@ body {
 .N-nav__openCart {
   position: absolute;
   font-size: 2rem;
-  width: 5%;
-  height: 86%;
-  right: 90px;
-  top: -7px;
+  width: 2rem;
+  height: 2.4rem;
+  right: 95px;
+  top: -1px;
   color: black;
   background-color: #fff;
   border-radius: 2rem;
@@ -1397,44 +1399,35 @@ body {
   flex-wrap: wrap;
 }
 .productDetails__name {
-  width: 100%;
+  width: 50%;
   font-size: 5rem;
 }
 .productDetails__price {
   width: 50%;
-  font-size: 5rem;
+  font-size: 8rem;
+  text-align: right;
 }
 .productDetails__buttons {
   width: 50%;
+  height: 10rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
 }
-.productDetails__pay {
-  width: 40%;
+.productDetails__pay, .productDetails__cart {
+  height: 10rem;
+  width: 10rem;
   font-size: 2.5rem;
   border-radius: 5rem;
   border: 0;
   cursor: pointer;
 }
-.productDetails__pay:hover {
+.productDetails__pay:hover, .productDetails__cart:hover {
   background-color: antiquewhite;
   scale: 1.2;
 }
-.productDetails__pay i {
-  font-size: 5rem;
-}
-.productDetails__cart {
-  width: 40%;
-  font-size: 2.5rem;
-  border-radius: 5rem;
-  cursor: pointer;
-  border: 0;
-}
-.productDetails__cart:hover {
-  background-color: antiquewhite;
-  scale: 1.2;
-}
-.productDetails__cart i {
+.productDetails__pay i, .productDetails__cart i {
   font-size: 5rem;
 }
 .productDetails__description {
@@ -1444,6 +1437,30 @@ body {
   width: 100%;
   object-fit: cover;
   border-radius: 10rem;
+}
+.productDetails__quantityContainer {
+  height: 10rem;
+  width: 50%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.productDetails__quantityContainer--decrease, .productDetails__quantityContainer--increase {
+  font-size: 4rem;
+  border: 0;
+  background-color: white;
+}
+.productDetails__quantityContainer--decrease:hover, .productDetails__quantityContainer--increase:hover {
+  scale: 1.3;
+}
+.productDetails__quantityContainer--number {
+  font-size: 3rem;
+  width: 15%;
+  border: 0;
+  text-align: center;
+  pointer-events: none;
 }
 
 .search {
@@ -1511,16 +1528,21 @@ body {
   display: flex;
   justify-content: center;
   gap: 3rem;
+  padding: 2rem;
+  border: 0.3rem solid black;
+}
+.shopCart__item {
+  margin: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
 }
 .shopCart__list {
   width: 60%;
-  background-color: aqua;
   font-size: 5rem;
   border-right: 0.5rem solid black;
 }
 .shopCart__pay {
   width: 40%;
-  background-color: antiquewhite;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1529,11 +1551,7 @@ body {
   height: 0.5rem;
   background-color: black;
 }
-.shopCart__pay--left {
-  width: 50%;
-  font-size: 5rem;
-}
-.shopCart__pay--right {
+.shopCart__pay--left, .shopCart__pay--right {
   width: 50%;
   font-size: 5rem;
 }
@@ -1545,15 +1563,18 @@ body {
 }
 .shopCart__button {
   width: 100%;
-  text-align: right;
 }
 .shopCart__button button {
   background-color: aquamarine;
   border-radius: 2rem;
-  width: 25%;
+  width: 100%;
   font-size: 5rem;
   border: 0;
+  margin-top: auto;
   cursor: pointer;
+}
+.shopCart__button button:hover {
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=style.css.map */

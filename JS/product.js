@@ -7,6 +7,7 @@ fetch(
   .then((data) => {
     products = data;
     showDetail();
+    setupAddToCart()
   });
 function showDetail() {
   let detail = document.querySelector(".productDetails__details");
@@ -38,6 +39,42 @@ function showDetail() {
     });
 }
 //productDetail display end
+
 //productCart display start
-const productCart = document.getElementById("productCart");
+function setupAddToCart() {
+  const addToCartButton = document.getElementById("productCart"); // 選擇購物車按鈕
+  addToCartButton.addEventListener("click", () => {
+    let productId = new URLSearchParams(window.location.search).get("id");
+    let thisProduct = products.filter((value) => value.id == productId)[0];
+    let productQuantity = document.querySelector('.productDetails__quantityContainer--number');
+    let cartQuantity = document.querySelector('.N-nav__openCart');
+    let storedCartQuantity = parseInt(localStorage.getItem('cartQuantity')) || 0;
+    
+
+    if (thisProduct) {
+      addToCart(thisProduct.name, thisProduct.price, productQuantity.value,cartQuantity.textContent);
+      alert(`${thisProduct.name} 已添加到購物車`);
+      cartQuantity.textContent = storedCartQuantity + parseInt(productQuantity.value);
+    }
+  });
+}
+function addToCart(name, price, quantity,cartQuantity) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.push({ name: name, price: price, quantity: quantity,cartQuantity:cartQuantity });
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
 //productCart display end
+
+//product "+,-" start
+document.querySelector('.productDetails__quantityContainer--increase').addEventListener('click', function () {
+  let quantityInput = document.querySelector('.productDetails__quantityContainer--number');
+  quantityInput.value = parseInt(quantityInput.value) + 1;
+});
+
+document.querySelector('.productDetails__quantityContainer--decrease').addEventListener('click', function () {
+  let quantityInput = document.querySelector('.productDetails__quantityContainer--number');
+  if (quantityInput.value > 1) {
+    quantityInput.value = parseInt(quantityInput.value) - 1;
+  }
+});
+//product "+,-" end

@@ -27,7 +27,7 @@
         </li>
         <li class="N-nav__link">
           <a href="shopCart.html"><i class="fas fa-shopping-cart"></i><span>購物車</span></a>
-          <span class="N-nav__openCart">5</span>
+          <p class="N-nav__openCart">0</p>
         </li>
         <li class="N-nav__link">
           <a href="login.html"><i class="fas fa-sign-in-alt"></i><span>登入</span></a>
@@ -47,6 +47,11 @@
         <div class="productDetails__buttons">
           <button id="productCart" class="productDetails__cart"><i class="fas fa-shopping-cart"></i></button>
           <button id="productPay" class="productDetails__pay"><i class="fas fa-wallet"></i></button>
+        </div>
+        <div class="productDetails__quantityContainer">
+          <button class="productDetails__quantityContainer--decrease"><i class="fas fa-minus-circle"></i></button>
+          <input type="number" class="productDetails__quantityContainer--number" value="1" min="1">
+          <button class="productDetails__quantityContainer--increase"><i class="fas fa-plus-circle"></i></button>
         </div>
         <div class="productDetails__description"></div>
       </div>

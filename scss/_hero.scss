@@ -65,15 +65,15 @@
   }
   &__link {
     list-style: none;
+    &:hover {
+      scale: 1.2;
+    }
     a {
       color: #fff;
       display: inline;
       padding: 1rem 1.5rem;
-      font-size: 2rem;
+      font-size: 2.5rem;
       text-decoration: none;
-      & :hover {
-        color: $color-tertiary;
-      }
       i {
         margin: 0 0.5rem;
       }
