@@ -1,6 +1,12 @@
 @use "base";
-.message{
+.message {
   font-size: 3rem;
+}
+.--invalid {
+  border: 2px solid red;
+}
+.--valid {
+  border: 2px solid green;
 }
 .login {
   position: absolute;
@@ -59,11 +65,15 @@
       &[type="submit"] {
         background-color: #677eff;
         border-radius: 0.5rem;
-        max-width: 10rem;
+        max-width: 50rem;
         color: #fff;
         cursor: pointer;
         transition: 0.5s;
         display: block;
+        &:disabled {
+          background-color: #ccc;
+          cursor: not-allowed;
+        }
       }
     }
   }
@@ -108,14 +118,6 @@
   justify-content: center;
   align-items: center;
   opacity: 0;
-
-  &__invalid {
-    border: 2px solid red;
-  }
-
-  &__valid {
-    border: 2px solid green;
-  }
 
   &__open {
     opacity: 1;
@@ -171,7 +173,7 @@
         &:disabled {
           background-color: #ccc;
           cursor: not-allowed;
-      }
+        }
       }
     }
   }

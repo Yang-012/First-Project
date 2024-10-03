@@ -12,6 +12,10 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
     </style>
+    <script type="module">
+      import { navberChange } from "./JS/navberModule.js";
+      navberChange();
+    </script>
     <script defer src="./JS/shopCart.js"></script>
   </head>
 </head> 
@@ -20,7 +24,7 @@
     <a href="index.html" class="N-logo"><i class="fas fa-paw"></i></a>
     <div class="N-hamburger"><i class="fas fa-bars"></i></div>
     <nav class="N-nav">
-      <ul class="N-nav__links">
+      <ul id="navber" class="N-nav__links">
         <li class="N-nav__link">
           <a href="map.html"
           ><i class="fas fa-map-marker-alt"></i><span>前往方式</span></a
@@ -34,12 +38,7 @@
         <li class="N-nav__link">
           <a href="shopCart.html"
               ><i class="fas fa-shopping-cart"></i><span>購物車</span></a
-            >
-        </li>
-        <li class="N-nav__link">
-          <a href="login.html"
-            ><i class="fas fa-sign-in-alt"></i><span>登入</span></a
-          >
+            ><p class="N-nav__openCart openCart--close">0</p>
         </li>
       </ul>
     </nav>
